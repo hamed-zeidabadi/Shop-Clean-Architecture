@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://v1.fontapi.ir/css/Vazir");
+
+*,
+*::after,
+*::before,
+html,
+body {
+  font-family: IRANSansfanum, Vazir, sans-serif !important;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
