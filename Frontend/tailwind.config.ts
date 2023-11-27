@@ -1,40 +1,34 @@
+import flowbite from "flowbite/plugin";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
+    "./app/**/*.{ts,tsx}",
+    "./node_modules/flowbite-react/lib/**/*.js",
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./pages/**/*.{ts,tsx}",
-    "./public/**/*.html",
+    // Or if using `src` directory:
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: {
+          50: "#eff6ff",
+          100: "#dbeafe",
+          200: "#bfdbfe",
+          300: "#93c5fd",
+          400: "#60a5fa",
+          500: "#3b82f6",
+          600: "#2563eb",
+          700: "#1d4ed8",
+          800: "#1e40af",
+          900: "#1e3a8a",
+        },
+      },
+    },
   },
-  plugins: [
-    require("flowbite/plugin")({
-      charts: true,
-      forms: true,
-      tooltips: true,
-    }),
-  ],
-  safelist: [
-    "w-64",
-    "w-1/2",
-    "rounded-l-lg",
-    "rounded-r-lg",
-    "bg-gray-200",
-    "grid-cols-4",
-    "grid-cols-7",
-    "h-6",
-    "leading-6",
-    "h-9",
-    "leading-9",
-    "shadow-lg",
-  ],
-  darkMode: "class",
-  corePlugins: {
-    preflight: false,
-  },
+  plugins: [flowbite],
 };
+
 export default config;
