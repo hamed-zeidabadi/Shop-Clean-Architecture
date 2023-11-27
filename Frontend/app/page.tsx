@@ -1,12 +1,9 @@
-import React from "react";
-import Nav from "./components/Navbar";
+import Nav from "./components/Nav";
 
-const Home = () => {
+export default function Home() {
   return (
-    <div className="w-max-screen">
+    <div className="app">
       <Nav />
     </div>
   );
-};
-
-export default Home;
+}
